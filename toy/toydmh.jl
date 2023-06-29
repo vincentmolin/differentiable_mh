@@ -146,3 +146,11 @@ samples, S, ∂S, excursions, accp = @time dmh(x0, θ, K, logtarget, Q, x->x[1]+
 @show ∂S, 2θ+1
 avg_excursion_length = K/excursions
 @show avg_excursion_length;
+
+
+
+include("toynn.jl")
+
+function gen(z)
+    py"gen_fwd"(z)
+end
